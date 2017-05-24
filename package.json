@@ -1,0 +1,21 @@
+{
+  "name": "danscottjones.com",
+  "version": "0.0.1",
+  "description": "Personal blog",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/dan-j/danscottjones.com"
+  },
+  "keywords": [
+    "blog",
+    "react",
+    "node",
+    "es6",
+    "contentful"
+  ],
+  "author": "dan-j",
+  "license": "MIT"
+}
