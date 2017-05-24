@@ -5,10 +5,7 @@
   "scripts": {
     "test": "jest"
   },
-  "repository": {
-    "type": "git",
-    "url": "github.com/dan-j/danscottjones.com"
-  },
+  "repository": "github.com/dan-j/danscottjones.com",
   "keywords": [
     "blog",
     "react",
@@ -17,5 +14,8 @@
     "contentful"
   ],
   "author": "dan-j",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^20.0.3"
+  }
 }
