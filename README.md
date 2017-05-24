@@ -1,0 +1,2 @@
+# danscottjones.com
+Personal blog
