@@ -2,6 +2,10 @@
   "name": "danscottjones.com",
   "version": "0.0.1",
   "description": "Personal blog",
+  "engines": {
+    "node": "7.1.0",
+    "npm": "3.10.6"
+  },
   "scripts": {
     "test": "jest"
   },
