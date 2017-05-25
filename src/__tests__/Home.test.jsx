@@ -1,4 +1,4 @@
-jest.mock('../contentfulClient', () => ({
+jest.mock('../services/contentfulClient', () => ({
     getEntries: () => {
         return require('./data/BlogPost').entries;
     },

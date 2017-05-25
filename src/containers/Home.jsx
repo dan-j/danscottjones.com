@@ -1,5 +1,5 @@
 import React from 'react';
-import contentfulClient from '../contentfulClient';
+import contentfulClient from '../services/contentfulClient';
 import BlogEntry from './BlogEntry';
 
 class Home extends React.Component {
@@ -24,6 +24,7 @@ class Home extends React.Component {
                     key={item.sys.id}
                     title={item.fields.title}
                     body={item.fields.body}
+                    slug={item.fields.slug}
                 />
         ));
         }
