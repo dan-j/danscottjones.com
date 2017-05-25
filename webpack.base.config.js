@@ -3,6 +3,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const webpack = require('webpack');
 
+// for running locally we load config from .env - Heroku already gives us process.env for us
 require('dotenv').config();
 
 module.exports = () => ({
