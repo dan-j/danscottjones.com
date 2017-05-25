@@ -51,6 +51,6 @@
         "webpack-merge": "^4.1.0"
     },
     "jest": {
-        "testRegex": "(/__tests__/.*|(\.|/))(test|spec)\.jsx?$"
+        "testRegex": "__tests__/.*(test|spec)\\.jsx?$"
     }
 }
