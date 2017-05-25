@@ -40,8 +40,12 @@ module.exports = () => ({
         new CopyWebpackPlugin([{
             from: 'src/index.html',
         }]),
-        new webpack.EnvironmentPlugin(['NODE_ENV']),
-        // new ExtractTextPlugin('styles.css'),
+
+        // this allows us to specify .env variables that get built into the client
         new DotEnv(),
+
+        new webpack.EnvironmentPlugin([
+            'NODE_ENV',
+        ]),
     ],
 });

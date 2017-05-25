@@ -24,6 +24,7 @@
     "author": "dan-j",
     "license": "MIT",
     "dependencies": {
+        "contentful": "^4.3.0",
         "http-server": "^0.10.0",
         "normalize.css": "^7.0.0",
         "react": "^15.5.4",
