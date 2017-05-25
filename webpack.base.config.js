@@ -1,8 +1,9 @@
 const path = require('path');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const DotEnv = require('dotenv-webpack');
 
 const webpack = require('webpack');
+
+require('dotenv').config();
 
 module.exports = () => ({
     entry: {
@@ -41,11 +42,14 @@ module.exports = () => ({
             from: 'src/index.html',
         }]),
 
-        // this allows us to specify .env variables that get built into the client
-        new DotEnv(),
-
         new webpack.EnvironmentPlugin([
             'NODE_ENV',
+            'CONTENTFUL_ACCESS_TOKEN',
+            'CONTENTFUL_SPACE_ID',
+            'CONTENTFUL_IS_PREVIEW',
+            'CONTENTFUL_PREVIEW_TOKEN',
+            'CONTENTFUL_PREVIEW_HOST',
+            'CONTENTFUL_CDN_HOST',
         ]),
     ],
 });
