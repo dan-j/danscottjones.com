@@ -1,0 +1,30 @@
+$x-small: 320px;
+$small: 480px;
+$med: 768px;
+$large: 992px;
+$x-large: 1200px;
+
+
+@mixin phone {
+  @media (min-width: $x-small) and (max-width: $small) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: $med) and (max-width: $large) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $large) and (max-width: $x-large) {
+    @content
+  }
+}
+
+@mixin desktop-xl {
+  @media (min-width: $x-large) {
+    @content
+  }
+}

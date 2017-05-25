@@ -7,7 +7,7 @@ jest.mock('../contentfulClient', () => ({
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-import Home from '../Home';
+import Home from '../containers/Home';
 
 test('<Home /> loads blogPost entries', done => {
     const component = renderer.create(

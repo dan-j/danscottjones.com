@@ -1,5 +1,6 @@
 import React from 'react';
-import contentfulClient from './contentfulClient';
+import contentfulClient from '../contentfulClient';
+import BlogEntry from './BlogEntry';
 
 class Home extends React.Component {
 
@@ -18,7 +19,13 @@ class Home extends React.Component {
         if (!entries) {
             content = <p>Loading...</p>
         } else {
-            content = JSON.stringify(entries.items.map(item => item.fields));
+            content = entries.items.map(item => (
+                <BlogEntry
+                    key={item.sys.id}
+                    title={item.fields.title}
+                    body={item.fields.body}
+                />
+        ));
         }
 
         return (
