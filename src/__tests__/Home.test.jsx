@@ -1,13 +1,24 @@
+jest.mock('../contentfulClient', () => ({
+    getEntries: () => {
+        return require('./data/BlogPost').entries;
+    },
+}));
+
 import React from 'react';
 import renderer from 'react-test-renderer';
+
 import Home from '../Home';
 
-test('it works!', () => {
+test('<Home /> loads blogPost entries', done => {
     const component = renderer.create(
         <Home />
     );
 
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
+    expect(component.toJSON()).toMatchSnapshot();
+
+    process.nextTick(() => {
+        expect(component.toJSON()).toMatchSnapshot();
+        done();
+    });
 
 });

@@ -1,7 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`it works! 1`] = `
-<h1>
-  danscottjones.com
-</h1>
+exports[`<Home /> loads blogPost entries 1`] = `
+<div>
+  <p>
+    Loading...
+  </p>
+</div>
+`;
+
+exports[`<Home /> loads blogPost entries 2`] = `
+<div>
+  [{"title":"Amazing Title","slug":"amazing-title","body":"What a body!"}]
+</div>
 `;

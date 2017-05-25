@@ -1,6 +1,5 @@
 import React from 'react';
-import contentfulClient from './contentfulClient.js';
-
+import contentfulClient from './contentfulClient';
 
 class Home extends React.Component {
 
