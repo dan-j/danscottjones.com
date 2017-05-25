@@ -7,6 +7,7 @@
         "npm": "3.10.6"
     },
     "scripts": {
+        "clean": "rm -rf dist",
         "test": "jest",
         "dev": "NODE_ENV=development webpack-dev-server --env=dev",
         "build": "npm run clean && NODE_ENV=production webpack -p --env=base",
