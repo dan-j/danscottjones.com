@@ -10,6 +10,26 @@ exports[`<Home /> loads blogPost entries 1`] = `
 
 exports[`<Home /> loads blogPost entries 2`] = `
 <div>
-  [{"title":"Amazing Title","slug":"amazing-title","body":"What a body!"}]
+  <div
+    style={
+      Object {
+        "backgroundColor": "white",
+        "margin": "2em",
+        "padding": "1em",
+      }
+    }
+  >
+    <a
+      href="/blog/amazing-title"
+      onClick={[Function]}
+    >
+      <h2>
+        Amazing Title
+      </h2>
+      <p>
+        What a body!
+      </p>
+    </a>
+  </div>
 </div>
 `;

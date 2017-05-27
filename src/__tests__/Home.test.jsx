@@ -6,12 +6,15 @@ jest.mock('../services/contentfulClient', () => ({
 
 import React from 'react';
 import renderer from 'react-test-renderer';
+import { MemoryRouter } from 'react-router-dom';
 
 import Home from '../containers/Home';
 
 test('<Home /> loads blogPost entries', done => {
     const component = renderer.create(
-        <Home />
+        <MemoryRouter>
+            <Home />
+        </MemoryRouter>
     );
 
     expect(component.toJSON()).toMatchSnapshot();
