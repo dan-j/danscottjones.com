@@ -6,7 +6,8 @@ const BlogPage = ({ title, body }) => (
         margin: '2em',
         backgroundColor: 'white',
         padding: '1em',
-    }}>
+    }}
+    >
         <h2>{title}</h2>
         <p>{body}</p>
     </section>

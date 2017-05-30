@@ -9,6 +9,7 @@
     },
     "scripts": {
         "clean": "rm -rf dist",
+        "lint": "eslint --ext .js --ext .jsx src/",
         "test": "jest",
         "dev": "NODE_ENV=development webpack-dev-server --env=dev",
         "build": "npm run clean && NODE_ENV=production webpack -p --env=base",
@@ -38,6 +39,7 @@
     "devDependencies": {
         "babel-cli": "^6.24.1",
         "babel-core": "^6.24.1",
+        "babel-eslint": "^7.2.3",
         "babel-loader": "^7.0.0",
         "babel-preset-es2015": "^6.24.1",
         "babel-preset-react": "^6.24.1",
@@ -45,6 +47,12 @@
         "copy-webpack-plugin": "^4.0.1",
         "css-loader": "^0.28.2",
         "dotenv": "^4.0.0",
+        "eslint": "^3.19.0",
+        "eslint-config-airbnb": "^15.0.1",
+        "eslint-plugin-import": "^2.3.0",
+        "eslint-plugin-jest": "^20.0.3",
+        "eslint-plugin-jsx-a11y": "^5.0.3",
+        "eslint-plugin-react": "^7.0.1",
         "jest": "^20.0.3",
         "node-sass": "^4.5.3",
         "react-test-renderer": "^15.5.4",

@@ -1,20 +1,19 @@
-jest.mock('../services/contentfulClient', () => ({
-    getEntries: () => {
-        return require('./data/BlogPost').entries;
-    },
-}));
-
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { MemoryRouter } from 'react-router-dom';
 
 import Home from '../containers/Home';
 
-test('<Home /> loads blogPost entries', done => {
+jest.mock('../services/contentfulClient', () => ({
+    // eslint-disable-next-line global-require
+    getEntries: () => require('./data/BlogPost').default.entries,
+}));
+
+test('<Home /> loads blogPost entries', (done) => {
     const component = renderer.create(
         <MemoryRouter>
             <Home />
-        </MemoryRouter>
+        </MemoryRouter>,
     );
 
     expect(component.toJSON()).toMatchSnapshot();
@@ -23,5 +22,4 @@ test('<Home /> loads blogPost entries', done => {
         expect(component.toJSON()).toMatchSnapshot();
         done();
     });
-
 });

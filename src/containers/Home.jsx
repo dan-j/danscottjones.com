@@ -17,14 +17,14 @@ class Home extends React.Component {
         const entries = this.state.entries;
         let content;
         if (!entries) {
-            content = <p>Loading...</p>
+            content = <p>Loading...</p>;
         } else {
             content = entries.items.map(item => (
                 <BlogEntry
-                    key={item.sys.id}
-                    title={item.fields.title}
-                    body={item.fields.body}
-                    slug={item.fields.slug}
+                  key={item.sys.id}
+                  title={item.fields.title}
+                  body={item.fields.body}
+                  slug={item.fields.slug}
                 />
         ));
         }

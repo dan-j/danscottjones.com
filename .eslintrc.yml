@@ -1,0 +1,24 @@
+extends: airbnb
+parser: babel-eslint
+installedESLint: true
+plugins:
+  - react
+  - jsx-a11y
+  - import
+  - jest
+env:
+  browser: true
+  jest/globals: true
+rules:
+  indent:
+    - error
+    - 4
+  react/jsx-indent:
+    - error
+    - 4
+  # don't complain about devDependencies in tests or webpack configs
+  import/no-extraneous-dependencies:
+    - 'error'
+    - devDependencies:
+      - '**/__tests__/**'
+      - 'webpack*'

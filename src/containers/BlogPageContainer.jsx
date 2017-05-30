@@ -8,7 +8,7 @@ export default class BlogPageContainer extends React.Component {
     static propTypes = {
         match: PropTypes.shape({
             params: PropTypes.shape({
-                slug: PropTypes.string.isRequired
+                slug: PropTypes.string.isRequired,
             }).isRequired,
         }).isRequired,
     };
@@ -22,17 +22,16 @@ export default class BlogPageContainer extends React.Component {
             content_type: 'blogPost',
             'fields.slug': this.props.match.params.slug })
             .then(entries => this.setState({ blogPost: entries.items[0] }));
-    }s
+    }
 
     render() {
-
         let content;
         const { blogPost } = this.state;
 
         if (!blogPost) {
             content = <p>Loading...</p>;
         } else {
-            content = <BlogPage title={blogPost.fields.title} body={blogPost.fields.body} />
+            content = <BlogPage title={blogPost.fields.title} body={blogPost.fields.body} />;
         }
 
         return (
