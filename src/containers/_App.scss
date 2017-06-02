@@ -1,0 +1,25 @@
+@import '../styles/breakpoints';
+
+.app {
+  width: 100%;
+}
+
+.content {
+
+  padding: 2em;
+  width: 100%;
+  margin: auto;
+
+  @include tablet {
+    width: $med;
+  }
+
+  @include desktop {
+    width: $large;
+  }
+
+  @include desktop-xl {
+    width: $x-large;
+  }
+
+}

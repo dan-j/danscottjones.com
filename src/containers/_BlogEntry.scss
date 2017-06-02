@@ -1,0 +1,13 @@
+.blog-entry {
+  padding: 1em;
+  margin: 2em 0;
+  border: 1px solid black;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
