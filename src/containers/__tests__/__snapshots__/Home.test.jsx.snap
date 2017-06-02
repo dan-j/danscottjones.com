@@ -11,13 +11,7 @@ exports[`<Home /> loads blogPost entries 1`] = `
 exports[`<Home /> loads blogPost entries 2`] = `
 <div>
   <div
-    style={
-      Object {
-        "backgroundColor": "white",
-        "margin": "2em",
-        "padding": "1em",
-      }
-    }
+    className="blog-entry"
   >
     <a
       href="/blog/amazing-title"
