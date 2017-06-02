@@ -34,11 +34,7 @@ export default class BlogPageContainer extends React.Component {
             content = <BlogPage title={blogPost.fields.title} body={blogPost.fields.body} />;
         }
 
-        return (
-            <div>
-                {content}
-            </div>
-        );
+        return content;
     }
 
 }

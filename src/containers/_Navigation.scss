@@ -1,0 +1,12 @@
+@import 'App';
+
+.nav {
+  width: 100%;
+  border-bottom: 1px solid black;
+  padding: 0 1em;
+
+  .nav-content {
+    padding: 0;
+    @extend .content;
+  }
+}

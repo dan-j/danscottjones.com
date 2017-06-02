@@ -1,14 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import CSSModules from 'react-css-modules';
+
+import styles from './_BlogEntry.scss';
 
 const BlogEntry = ({ title, body, slug }) => (
-    <div style={{
-        margin: '2em',
-        backgroundColor: 'white',
-        padding: '1em',
-    }}
-    >
+    <div styleName="blog-entry">
         <Link to={`/blog/${slug}`}>
             <h2>{title}</h2>
             <p>{body}</p>
@@ -22,4 +20,4 @@ BlogEntry.propTypes = {
     slug: PropTypes.string.isRequired,
 };
 
-export default BlogEntry;
+export default CSSModules(BlogEntry, styles);

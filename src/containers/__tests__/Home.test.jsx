@@ -2,9 +2,9 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import { MemoryRouter } from 'react-router-dom';
 
-import Home from '../containers/Home';
+import Home from '../Home';
 
-jest.mock('../services/contentfulClient', () => ({
+jest.mock('../../services/contentfulClient', () => ({
     // eslint-disable-next-line global-require
     getEntries: () => require('./data/BlogPost').default.entries,
 }));

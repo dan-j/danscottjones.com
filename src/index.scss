@@ -10,28 +10,11 @@
 
   -moz-padding-start: 0;
   -webkit-padding-start: 0;
+
+  padding: 0;
 }
 
-body {
-  margin: auto;
-  padding: 1em;
-  background: #e2e2e2;
-}
-
-@include desktop-xl {
-  body {
-    width: $large;
-  }
-}
-
-@include tablet {
-  body {
-    width: $med;
-  }
-}
-
-@include phone {
-  body {
-    width: 100%;
-  }
+a {
+  text-decoration: none;
+  color: black;
 }
